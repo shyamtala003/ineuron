@@ -1,0 +1,112 @@
+header,.achivement_section
+{
+    overflow-x:hidden ;
+    position: relative;
+    background:var(--bg-dark);
+}
+
+header::after,.achivement_section::after
+{
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 
+    0px 0px 110px 20px rgb(159 59 246 / 10%),
+    0px 0px 220px 30px rgb(159 59 246/20%),
+    0px 0px 330px 30px rgb(159 59 246 / 30%),
+    0px 0px 440px 40px rgb(159 59 246 / 40%),
+    0px 0px 550px 50px rgb(159 59 246 / 50%),
+    0px 0px 660px 60px rgb(159 59 246 / 60%),
+    0px 0px 770px 70px rgba(159, 59, 246, 0.702);
+
+    background-color: rgb(159 59 246 / 0%);
+    z-index: 1 ;
+    filter: blur(120px);
+    opacity: .8;
+    animation: bg-animate-after 15s linear infinite;
+}
+
+@keyframes bg-animate-after {
+    0%
+    {
+        left: 25%;
+        top:25%;
+        transform: translate(-0%,-0%);
+    }25%
+    {
+        left: 50%;
+        top: 50%;
+        transform: translate(-25%,-20%);
+    }50%
+    {
+        left: 25%;
+        top: 50%;
+        transform: translate(-25%,-0%);
+    }
+    75%
+    {
+        left: 50%;
+        top: 25%;
+        transform: translate(-0%,25%);
+    }100%{
+        left: 25%;
+        top:25%;
+        transform: translate(-0%,-0%);
+    }
+}
+header::before,.achivement_section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 
+    0px 0px 110px 20px rgb(45 212 191 / 10%),
+    0px 0px 220px 30px rgb(45 212 191 / 20%),
+    0px 0px 330px 30px rgb(45 212 191 / 30%),
+    0px 0px 440px 40px rgb(45 212 191 / 40%),
+    0px 0px 550px 50px rgb(45 212 191 / 50%),
+    0px 0px 660px 60px rgb(45 212 191 / 60%),
+    0px 0px 770px 70px rgb(45 212 191 / 70%);
+    background-color: rgb(45, 212, 191);
+    z-index: 2;
+    opacity: .8;
+    filter: blur(120px);
+    animation: bg-animate-before 15s linear infinite;
+}
+
+@keyframes bg-animate-before {
+    0%
+    {
+        right: 0%;
+        bottom:0%;
+        transform: translate(-0%,-0%);
+    }25%
+    {
+        right: 50%;
+        bottom: 50%;
+        transform: translate(-25%,-20%);
+    }50%
+    {
+        right: 25%;
+        bottom: 50%;
+        transform: translate(-25%,-0%);
+    }
+    75%
+    {
+        right: 50%;
+        bottom: 25%;
+        transform: translate(-0%,25%);
+    }100%{
+        right: 0%;
+        bottom:0%;
+        transform: translate(-0%,-0%);
+    }
+}
